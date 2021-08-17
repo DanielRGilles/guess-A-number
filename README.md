@@ -9,3 +9,26 @@
 8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
 9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.
 
+## Html Element
+    1. input number box
+    2. button to check input
+    3. results of too high, too low
+    4. final result of out of guesses = loss or win
+
+## state
+    1. create a default correct number on each reload of page  
+       
+    2. count the number of guesses
+
+## events
+    1. on click
+        numberify the input
+        check it against the correct value
+        display if the guess was too high, too low, or correct
+        as well as decrementing number of guesses
+
+## functions needed
+ 1. Correct answer maker using 
+    Math.floor(Math.random(* 10))
+    or setRange function so the math random is always 1-10
+ 2. 
