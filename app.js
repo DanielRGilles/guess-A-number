@@ -1,3 +1,5 @@
+// import { compareAndAct } from './utils.js';
+
 // import functions and grab DOM elements
 const inputEl = document.getElementById('user-input');
 const buttonEl = document.getElementById('button');
@@ -17,31 +19,29 @@ correctAnswer = getRandom(20);
 console.log(correctAnswer);
 // ^^^ at this point I have initialized the states that I need ^^
 
-
 // set event listeners 
 buttonEl.addEventListener('click', () => {
-    turnsLeft = turnsLeft - 1;
+    turnsLeft--;
   // after each click the number of turns left decrements
-
     userGuess = Number(inputEl.value);
     // console.log(userGuess);
-
-   
-
+    // const turn = compareAndAct(userGuess, correctAnswer);
+// console.log(turn);
+    
     if (correctAnswer === userGuess) {
         guessesEl.textContent = 'You Win!';
         guessesEl.style.color = 'white';
         return;
-    } else if (correctAnswer > userGuess) {
-        guessesEl.textContent = `You are too low and you have ${turnsLeft} guesses left`;
+    } else if (correctAnswer > userGuess) { guessesEl.textContent = `You are too low and you have ${turnsLeft} guesses left`;
+       
     } else if (correctAnswer < userGuess) {
         guessesEl.textContent = `You are too high and you have ${turnsLeft} guesses left`;
 
     }
 
-    console.log(turnsLeft);
+    // console.log(turnsLeft);
     if (turnsLeft < 1) {
-        resultEl.textContent = 'I hate to say it, but You kind of lost';
+        resultEl.textContent = 'I hate to say it, but You kind of lost, I even googled the saddest color and apparently its gray :(';
         buttonEl.style.visibility = 'hidden';
         resultEl.style.display = 'inline';
     // when turns left goes below 1 buttonEl disappears 
@@ -51,10 +51,7 @@ buttonEl.addEventListener('click', () => {
 
 });
 
-
+// below is the reset button for the page/game
 resetEl.addEventListener('click', () => {
     location.reload();
 });
-// get user input
-// use user input to update state 
-// update DOM to reflect the new state
