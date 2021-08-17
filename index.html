@@ -13,16 +13,20 @@
 </head>
 
 <body>
-    <header>
-       
-    </header>
-    <main>
-        <section class="main-section">
-            <img class="main-logo" src="" />
+    <main class="page-container">
+        <section class="inner-cont">
             <h2>
                 Guess A Number!
             </h2>
+            <p id="guesses-left">You have four guesses and your goal is to guess the correct number between 1-20</p>
+            <nav>
+                <input id='user-input' type="text">
+                <button class='btn-style' id="button">Check Your Guess</button>
+
+                <button class='btn-style' id="reset">Reset</button>
+            </nav>
         </section>
+        <div id="recap-box">You Finished the game!</div>
     </main>
     <script type="module" src="./app.js"></script>
 </body>
