@@ -169,7 +169,7 @@ footer {
 
   @media only screen and (max-width: 400px) {
       #guesses-left {
-          font-size: 1.5rem;
+          font-size: .75rem;
           width: 100%;
       }
       .inner-cont {
