@@ -6,8 +6,9 @@ const buttonEl = document.getElementById('button');
 const resetEl = document.getElementById('reset');
 const resultEl = document.getElementById('recap-box');
 const guessesEl = document.getElementById('guesses-left');
-
+const timesPlayedEL = document.getElementById('times-played');
 // initialize global state
+let timesPlayed = 0;
 let turnsLeft = 4;
 let correctAnswer = 0;
 let userGuess = 0;
@@ -54,4 +55,8 @@ buttonEl.addEventListener('click', () => {
 // below is the reset button for the page/game
 resetEl.addEventListener('click', () => {
     location.reload();
+    
+    timesPlayed++;
+    timesPlayedEL.textContent = timesPlayed;
 });
+

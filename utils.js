@@ -21,7 +21,7 @@ export function compareAndAct(num1, num2) {
             num1 < num2 ? high :
                 outOfRange;
 }
-
+let turnsLeft = 4;
 export function compareNumbers(correctAnswer, userGuess) {
     if (correctAnswer === userGuess) {
         guessesEl.textContent = 'You Win!';
@@ -32,11 +32,11 @@ export function compareNumbers(correctAnswer, userGuess) {
     } else if (correctAnswer < userGuess) {
         guessesEl.textContent = `You are too high and you have ${turnsLeft} guesses left`;
 
-    }
+    }}
 
-    // console.log(turnsLeft);
-    if (turnsLeft < 1) {
-        resultEl.textContent = 'I hate to say it, but You kind of lost, I even googled the saddest color and apparently its gray :(';
-        buttonEl.style.visibility = 'hidden';
-        resultEl.style.display = 'inline';
-}
+//     // console.log(turnsLeft);
+//     if (turnsLeft < 1) {
+//         resultEl.textContent = 'I hate to say it, but You kind of lost, I even googled the saddest color and apparently its gray :(';
+//         buttonEl.style.visibility = 'hidden';
+//         resultEl.style.display = 'inline';
+// }

@@ -121,10 +121,12 @@ footer {
 
   .inner-cont {
       background-color: var(--color2);
-      margin: 15px;
-      padding: 15px;
+      margin: 5px;
+      padding: 5px;
       display: flex;
       justify-content: space-evenly;
+      width: 65%;
+      height: 55%;
   }
   nav {
     display: flex;
@@ -132,7 +134,7 @@ footer {
     justify-content: center;
       align-items: center;
       padding: 5px;
-      margin:40px;
+      margin:10px;
       width: 75%;
       height: 100%;
   }
@@ -140,11 +142,12 @@ footer {
       display: none;
       border: solid 1px black;
       background-color: var(--color5);
-      padding: 15px;
+      padding: 5px;
       margin-top: 25px;
       height: 170px;
       font-size: 3rem;
       font-weight: 700;
+      /* width: 85%; */
       
   }
   .btn-style {
@@ -161,4 +164,5 @@ footer {
       font-size: 2.5rem;
       text-transform: capitalize;
       font-weight: 700;
+      width: 55%;
   }
