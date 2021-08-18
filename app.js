@@ -29,7 +29,7 @@ buttonEl.addEventListener('click', () => {
 // console.log(turn);
     
     if (correctAnswer === userGuess) {
-        guessesEl.textContent = 'You Win!';
+        guessesEl.textContent = 'You Win! I\'d give you ice cream or something but...you know ..Ants';
         guessesEl.style.color = 'white';
         return;
     } else if (correctAnswer > userGuess) { guessesEl.textContent = `You are too low and you have ${turnsLeft} guesses left`;
