@@ -17,7 +17,7 @@ function getRandom(num) {
     return Math.ceil(Math.random() * num);
 }
 correctAnswer = getRandom(20);
-console.log(correctAnswer);
+// console.log(correctAnswer);
 // ^^^ at this point I have initialized the states that I need ^^
 
 // set event listeners 
@@ -45,6 +45,7 @@ buttonEl.addEventListener('click', () => {
         resultEl.textContent = 'I hate to say it, but You kind of lost, I even googled the saddest color and apparently its gray :(';
         buttonEl.style.visibility = 'hidden';
         resultEl.style.display = 'inline';
+        
     // when turns left goes below 1 buttonEl disappears 
     // button is disabled
     }
@@ -54,8 +55,11 @@ buttonEl.addEventListener('click', () => {
 
 // below is the reset button for the page/game
 resetEl.addEventListener('click', () => {
-    location.reload();
-    
+    // location.reload();
+    turnsLeft = 4;
+    correctAnswer = getRandom(20);
+    guessesEl.textContent = 'You have four guesses and your goal is to guess the correct number between 1-20';
+    resultEl.style.display = 'none';
     timesPlayed++;
     timesPlayedEL.textContent = timesPlayed;
 });
