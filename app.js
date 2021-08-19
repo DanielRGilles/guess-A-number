@@ -13,7 +13,7 @@ let turnsLeft = 4;
 let correctAnswer = 0;
 let userGuess = 0;
 // making a function to generate the random correct answer on page load
-function getRandom(num) {
+export function getRandom(num) {
     return Math.ceil(Math.random() * num);
 }
 correctAnswer = getRandom(20);
