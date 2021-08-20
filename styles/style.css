@@ -85,13 +85,24 @@ p {
   
 footer {
     position: fixed;
-    width: 100%;
+    width: 5%;
     bottom: 0;
-    height: var(--footer-height);
+    height: 30px;
     display: flex;
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+    border: outset 3px black;
+    right: 0;
+    text-align: center;
+    justify-content: center;
+    
+    
+}
+.above-tp {
+    position: fixed;
+    bottom: 3%;
+    font-weight: bolder;
 }
   
   @keyframes pulse {
