@@ -42,7 +42,7 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    border: outset 4px white;
 }
 
 header {
@@ -166,15 +166,50 @@ footer {
       font-weight: 700;
       width: 55%;
   }
-
-  @media screen (max-width: 400px) {
+  @media screen and (max-width: 470px) {
+      
+    #guesses-left {
+        font-size: .5em;
+        width: 100%;
+        margin: 5px;
+        padding: 5px;
+        height: 67%;
+    }
+    .inner-cont {
+        font-size: 1px;
+        color: rgba(31, 22, 7, 0.527);
+        height: 75vh;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+  @media screen and (max-width: 590px) {
       
       #guesses-left {
-          font-size: 15px;
+          font-size: .5em;
           width: 100%;
       }
       .inner-cont {
-          font-size: 5px;
-          background-color: black;
+          font-size: .5rem;
+         
+      }
+      h1 {
+          font-size: 2rem;
+      }
+      nav {
+          padding: 3px;
+          margin: 5px;
       }
   }
+  @media screen and (max-width: 977px) {
+      
+    #guesses-left {
+        font-size: 1em;
+        width: 100%;
+    }
+    .inner-cont {
+        font-size: 2rem;
+       
+    }
+}
