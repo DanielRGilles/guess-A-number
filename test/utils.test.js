@@ -22,12 +22,14 @@ test('should take in a number and return true if 1-20 and false if outside of th
     // Set up your arguments and expectations
     let actual;
     let rollGen1;
-    num1 = 20;
-    rollGen1 = getRandom(num1);
+    //num1 = 20;
+    rollGen1 = getRandom(20);
+    actual = (0 < rollGen1 && rollGen1 < 21);
+    /*
     if (0 < rollGen1 && rollGen1 < 21) {
         actual = true;
     } else return false;
-    
+    */
     //Act 
     // Call the function you're testing and set the result to a const
     
