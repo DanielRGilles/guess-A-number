@@ -60,7 +60,6 @@ footer {
     box-shadow: var(--shadow);
 }
 
-
 h1 {
     font-size: 2.8rem;
     font-weight: bold;
@@ -85,7 +84,7 @@ p {
   
 footer {
     position: fixed;
-    width: 5%;
+    width: 100px;
     bottom: 0;
     height: 30px;
     display: flex;
@@ -96,89 +95,71 @@ footer {
     right: 0;
     text-align: center;
     justify-content: center;
-    
-    
 }
+
 .above-tp {
     position: fixed;
     bottom: 3%;
     font-weight: bolder;
 }
-  
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
 
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
+.page-container {
+    background-color: var(--color3);
+    height: 100vh;
+}
 
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
+.inner-cont {
+    background-color: var(--color2);
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 65%;
+    height: 55%;
+}
 
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
-
-  }
-
-  .page-container {
-      background-color: var(--color3);
-      height: 100vh;
-      /* margin: 5px; */
-  }
-
-  .inner-cont {
-      background-color: var(--color2);
-      margin: 5px;
-      padding: 5px;
-      display: flex;
-      justify-content: space-evenly;
-      width: 65%;
-      height: 55%;
-  }
-  nav {
+nav {
     display: flex;
     flex-direction: column; 
     justify-content: center;
-      align-items: center;
-      padding: 5px;
-      margin:10px;
-      width: 75%;
-      height: 100%;
-  }
-  #recap-box {
-      display: none;
-      border: solid 1px black;
-      background-color: var(--color5);
-      padding: 5px;
-      margin-top: 25px;
-      height: 170px;
-      font-size: 3rem;
-      font-weight: 700;
-      /* width: 85%; */
-      
-  }
-  .btn-style {
-      border-radius: 7px;
-      width: 35%;
-      margin:10px;
-      cursor: pointer;
-  }
-  .btn-style:hover {
-      background-color: var(--color5);
-      transform: scale(105%);
-  }
-  #guesses-left {
-      font-size: 2.5rem;
-      text-transform: capitalize;
-      font-weight: 700;
-      width: 55%;
-  }
-  @media screen and (max-width: 470px) {
-      
+    align-items: center;
+    padding: 5px;
+    margin:10px;
+    width: 75%;
+    height: 100%;
+}
+
+#recap-box {
+    display: none;
+    border: solid 1px black;
+    background-color: var(--color5);
+    padding: 5px;
+    margin-top: 25px;
+    height: 170px;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.btn-style {
+    border-radius: 7px;
+    width: 35%;
+    margin:10px;
+    cursor: pointer;
+}
+
+.btn-style:hover {
+    background-color: var(--color5);
+    transform: scale(105%);
+}
+
+#guesses-left {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    width: 55%;
+}
+
+@media screen and (max-width: 470px) {
     #guesses-left {
         font-size: .5em;
         width: 100%;
@@ -188,39 +169,37 @@ footer {
     }
     .inner-cont {
         font-size: 1px;
-        color: rgba(31, 22, 7, 0.527);
+        color: black;
         height: 75vh;
     }
     h1 {
         font-size: 1.5rem;
     }
 }
-  @media screen and (max-width: 590px) {
-      
-      #guesses-left {
-          font-size: .5em;
-          width: 100%;
-      }
-      .inner-cont {
-          font-size: .5rem;
-         
-      }
-      h1 {
-          font-size: 2rem;
-      }
-      nav {
-          padding: 3px;
-          margin: 5px;
-      }
-  }
-  @media screen and (max-width: 977px) {
-      
+
+@media screen and (max-width: 590px) {
+    #guesses-left {
+        font-size: .5em;
+        width: 100%;
+    }
+    .inner-cont {
+        font-size: .5rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    nav {
+        padding: 3px;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 977px) {
     #guesses-left {
         font-size: 1em;
         width: 100%;
     }
     .inner-cont {
         font-size: 2rem;
-       
     }
 }
