@@ -21,7 +21,7 @@ export function getRandom(num) {
     return Math.ceil(Math.random() * num);
 }
 correctAnswer = getRandom(20);
-
+console.log(correctAnswer);
 // ^^^ at this point I have initialized the states that I need ^^
 
 
@@ -32,19 +32,6 @@ buttonEl.addEventListener('click', () => {
     userGuess = Number(inputEl.value);
 
     const actionJaxon = compareNum(userGuess, correctAnswer);
-
-
-    if (actionJaxon === 0) {
-        guessesEl.textContent = 'You Win! I\'d give you ice cream or something but...you know ..Ants';
-        guessesEl.style.color = 'white';
-    } else if (actionJaxon === 1) {
-        guessesEl.textContent = `You are too high and you have ${turnsLeft} guesses left`;
-
-    } else {
-        guessesEl.textContent = `You are too low and you have ${turnsLeft} guesses left`;
-    }
-
-
     if (turnsLeft < 1) {
         resultEl.textContent = 'I hate to say it, but You kind of lost, I even googled the saddest color and apparently its gray :(';
         buttonEl.style.visibility = 'hidden';
@@ -53,6 +40,21 @@ buttonEl.addEventListener('click', () => {
         // when turns left goes below 1 buttonEl disappears 
         // button is disabled
     }
+
+    if (actionJaxon === 0) {
+        guessesEl.textContent = 'You Win! I\'d give you ice cream or something but...you know ..Ants';
+        guessesEl.style.color = 'white';
+        resultEl.style.display = 'none';
+
+    } else if (actionJaxon === 1) {
+        guessesEl.textContent = `You are too high and you have ${turnsLeft} guesses left`;
+
+    } else {
+        guessesEl.textContent = `You are too low and you have ${turnsLeft} guesses left`;
+    }
+
+
+    
 });
 
 
