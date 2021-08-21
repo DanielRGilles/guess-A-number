@@ -1,4 +1,6 @@
-// import { compareAndAct } from './utils.js';
+import {
+    compareNum
+} from './utils.js';
 
 // import functions and grab DOM elements
 const inputEl = document.getElementById('user-input');
@@ -19,42 +21,47 @@ export function getRandom(num) {
     return Math.ceil(Math.random() * num);
 }
 correctAnswer = getRandom(20);
-// console.log(correctAnswer);
+
 // ^^^ at this point I have initialized the states that I need ^^
+
 
 // set event listeners 
 buttonEl.addEventListener('click', () => {
     turnsLeft--;
     // after each click the number of turns left decrements
     userGuess = Number(inputEl.value);
-    
-    if (correctAnswer === userGuess) {
+
+    const actionJaxon = compareNum(userGuess, correctAnswer);
+
+
+    if (actionJaxon === 0) {
         guessesEl.textContent = 'You Win! I\'d give you ice cream or something but...you know ..Ants';
         guessesEl.style.color = 'white';
-        return;
-    } else if (correctAnswer > userGuess) {
-        guessesEl.textContent = `You are too low and you have ${turnsLeft} guesses left`;
-    } else if (correctAnswer < userGuess) {
+    } else if (actionJaxon === 1) {
         guessesEl.textContent = `You are too high and you have ${turnsLeft} guesses left`;
 
+    } else {
+        guessesEl.textContent = `You are too low and you have ${turnsLeft} guesses left`;
     }
+
 
     if (turnsLeft < 1) {
         resultEl.textContent = 'I hate to say it, but You kind of lost, I even googled the saddest color and apparently its gray :(';
         buttonEl.style.visibility = 'hidden';
         resultEl.style.display = 'inline';
-        
-    // when turns left goes below 1 buttonEl disappears 
-    // button is disabled
+
+        // when turns left goes below 1 buttonEl disappears 
+        // button is disabled
     }
 });
 
-// below is the reset button for the page/game
+
 resetEl.addEventListener('click', () => {
-    // location.reload();
+    // this will reset the game without reloading the page
     turnsLeft = 4;
     correctAnswer = getRandom(20);
     guessesEl.textContent = 'You have four guesses and your goal is to guess the correct number between 1-20';
+    guessesEl.style.color = 'black';
     resultEl.style.display = 'none';
     timesPlayed++;
     timesPlayedEL.textContent = timesPlayed;
