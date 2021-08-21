@@ -21,7 +21,7 @@ export function getRandom(num) {
     return Math.ceil(Math.random() * num);
 }
 correctAnswer = getRandom(20);
-console.log(correctAnswer);
+
 // ^^^ at this point I have initialized the states that I need ^^
 
 
